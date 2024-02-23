@@ -1,30 +1,19 @@
-#code to learn about variables...
+#ask the user for their name
+username = input("What is your name? ")
 
-#variables can be a string (note the speech marks)
-greeting = "hello world"
+#ask the user for their favourite number (integer)
+fav_num = int(input('what is your favourite number? '))
+# doublec, halve and square the user's favourite number
+double_num = fav_num * 2
+halve = fav_num / 2
+square = fav_num * fav_num
 
-#variables can be a number
-fav_num = 7
-#num_string
-num_string = "5"
-#variables can be a boolean (true or false)
-love_python = True
-
-#printing variables
-print(greeting)
-print(fav_num)
-print(num_string)
-print(love_python)
-#these variable has a problem
-# my name = "Miss G"
-# 1item = "apple"
-#variable Cannot be two separate Entities and must start with a letter not a number
-
-#print variable in name will come out as the name not it's value
-print('num_string')
-
-#num_string: int & string is two different things
-#int it's value times the number 5 = (35) 
-print(fav_num * 5)
-#where for string it just prints itself 5 times (55555)
-print(num_string * 5)
+#greet the user
+print(f'Hello {username}, your favourite number is {fav_num}')
+#output the results of doubling, halving and 
+print(f'Double {fav_num} is {double_num}.')
+print(f'Half {fav_num} is {halve}.')
+print(f'Square {fav_num} is {square}.')
+print()
+print("Have a nice day.")
+#squaring their favourite integer
