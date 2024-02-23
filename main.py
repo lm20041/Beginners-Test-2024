@@ -1,7 +1,7 @@
-#ask user for question
-#
+# Ask the user for the width and height
+# (assume they put in valid data)
 def num_check(question):
-  
+
   error = "Please enter a number that is more than 0\n"
   while True:
     try:
@@ -15,13 +15,19 @@ def num_check(question):
     except ValueError:
       print("Please enter a number")
 
-#main routine
-for item in range(0,2):
+#calculate the area / perimeter
+def calculate(width, height):
+  area = width * height
+  perimeter = (width * 2) + (height * 2)
+  ans = f'the area is {area} and perimeter is {perimeter}'
+  return ans
+#Input the area and perimeter
+for item in range(0,1):
   width = num_check("Width: ")
-  print(width)
 
 print()
 
-for item in range(0,2):
+for item in range(0,1):
   height = num_check("Height: ")
-  print(height)
+#Output the area and perimeter
+print(calculate(width, height))
