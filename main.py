@@ -1,14 +1,27 @@
-# Ask user for width and loop until they enter a number that is more than 0
+#ask user for question
+#
+def num_check(question):
+  
+  error = "Please enter a number that is more than 0\n"
+  while True:
+    try:
+      #input
+      response = float(input(question))
+      #loop until they enter a number that is more than 0
+      if response > 0:
+        return response
+      else:
+        print(error)
+    except ValueError:
+      print("Please enter a number")
 
-error = "Please enter a number that is more than 0"
-while True:
-  try:
-    #input
-    width = float(input("Enter the width of the rectangle: "))
-    #loop until they enter a number that is more than 0
-    if width > 0:
-      break
-    else:
-      print(error)
-  except ValueError:
-    print("Please enter a number")
+#main routine
+for item in range(0,2):
+  width = num_check("Width: ")
+  print(width)
+
+print()
+
+for item in range(0,2):
+  height = num_check("Height: ")
+  print(height)
