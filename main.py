@@ -17,6 +17,8 @@ def num_check(question):
 def calculate(width, height):
   area = width * height
   perimeter = (width * 2) + (height * 2)
+  return area, perimeter
+def output(area, perimeter):
   ans = f'the area is {area} and perimeter is {perimeter}'
   return ans
 #main routine starts here...
@@ -29,8 +31,10 @@ while keep_going == "":
   for item in range(0,1):
     height = num_check("Height: ")
   # calculate area/ perimeter
+  area, perimeter = calculate(width, height)
   # display output
-  print(calculate(width, height))
+  print(output(area, perimeter))
   # ask user if they want to keep going
   keep_going = input("Press <enter> to keep going or any key to quit")
   print()
+print(f'Thank you for using the program')
