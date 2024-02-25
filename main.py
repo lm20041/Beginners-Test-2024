@@ -14,20 +14,23 @@ def num_check(question):
         print(error)
     except ValueError:
       print("Please enter a number")
-
-#calculate the area / perimeter
 def calculate(width, height):
   area = width * height
   perimeter = (width * 2) + (height * 2)
   ans = f'the area is {area} and perimeter is {perimeter}'
   return ans
-#Input the area and perimeter
-for item in range(0,1):
-  width = num_check("Width: ")
-
-print()
-
-for item in range(0,1):
-  height = num_check("Height: ")
-#Output the area and perimeter
-print(calculate(width, height))
+#main routine starts here...
+keep_going = ""
+while keep_going == "":
+  # get width & height
+  for item in range(0,1):
+    width = num_check("Width: ")
+  print()
+  for item in range(0,1):
+    height = num_check("Height: ")
+  # calculate area/ perimeter
+  # display output
+  print(calculate(width, height))
+  # ask user if they want to keep going
+  keep_going = input("Press <enter> to keep going or any key to quit")
+  print()
