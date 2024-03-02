@@ -13,20 +13,19 @@ def int_check(question, low):
       print(error)
 
 #Calculates how many bits are needed to represent an integer
-def integer_calc():
+def image_calc():
   # get the image dimensions
-  integer = int_check("Integer: ", 0)
+  width = int_check("Width: ", 0)
+  height = int_check("Height: ", 0)
 
-  # convert the integer to binary and work out the number of bits needed
-  raw_binary = bin(integer)
-  # remove the 0b from the front of the raw_binary
-  binary = raw_binary[2:]
-  num_bits = len(binary) 
-  
+  # calculate the number of pixels and multiply by 24 to get the number of bits
+  num_pixels = width * height
+  num_bits = num_pixels * 24
+
   # set up answer and return it
-  answer = f"{integer} in binary is {binary}. We need {num_bits} to represent it."
+  answer = (f"Number of pixels: {width} X {height} = {num_pixels}" 
+    f"\nNumber of bits {num_pixels} X 24 ={num_bits}")
   return answer
-
 #Calculates number of bits needed to represent text in ascii
 def calc_text_bits():
   #get text from user
@@ -45,5 +44,5 @@ def calc_text_bits():
 text_ans = calc_text_bits()
 print(text_ans)
 print()
-integer_ans = integer_calc()
-print(integer_ans)
+image_ans = image_calc()
+print(image_ans)
