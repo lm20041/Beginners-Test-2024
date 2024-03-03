@@ -40,9 +40,24 @@ def calc_text_bits():
   f"\nwhich is {num_bits} bits")
   return answer
 
+#Calculates how many bits are needed to represent an integer
+def integer_calc():
+  # get the image dimensions
+  integer = int_check("Integer: ", 0)
+  # convert the integer to binary and work out the number of bits needed
+  raw_binary = bin(integer)
+  # remove the 0b from the front of the raw_binary
+  binary = raw_binary[2:]
+  num_bits = len(binary) 
+  # set up answer and return it
+  answer = f"{integer} in binary is {binary}. We need {num_bits} to represent it."
+  return answer
 #Main Routine goes here
 text_ans = calc_text_bits()
 print(text_ans)
 print()
 image_ans = image_calc()
 print(image_ans)
+print()
+integer_ans = integer_calc()
+print(integer_ans)
